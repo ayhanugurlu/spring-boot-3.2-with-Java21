@@ -1,5 +1,7 @@
 package com.au.example.springboot32withjava21.sealed;
 
+import java.util.LinkedHashSet;
+
 public class SealedExample {
 
     String displayUserForLoanSwitch(Loan loan) {
@@ -11,6 +13,7 @@ public class SealedExample {
     }
 
     String displayUserForLoanWithIf(Loan loan) {
+        LinkedHashSet l = new LinkedHashSet();
 
         if (loan instanceof SecuredLoan sl) {
             System.out.println(sl.getClass());
